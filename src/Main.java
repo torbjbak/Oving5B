@@ -12,6 +12,7 @@ public class Main {
 
             Statement stmt = con.createStatement();
 
+            System.out.println("Forfatter           Tittel");
             ResultSet rs = stmt.executeQuery("select forfatter, tittel from boktittel where isbn = '0-596-00123-1'");
             while(rs.next()) {
                 System.out.println(rs.getString("forfatter") + "   " + rs.getString("tittel"));
@@ -19,7 +20,7 @@ public class Main {
 
             rs = stmt.executeQuery("select count(*) antall from eksemplar where isbn = '0-596-00123-1'");
             while(rs.next()) {
-                System.out.println(rs.getInt("antall"));
+                System.out.println("\nAntall: "+ rs.getInt("antall"));
             }
 
             con.close();
