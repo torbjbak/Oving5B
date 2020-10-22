@@ -12,8 +12,6 @@ public class Oppg5Bb {
             Connection con = DriverManager.getConnection("jdbc:mysql://mysql-ait.stud.idi.ntnu.no/torbjbak",
                     "torbjbak", "Le8OcFET");
 
-            Statement stmt = con.createStatement();
-
             System.out.print("Registrer lånetaker!\nEksemplarnr: ");
             int eksNr = sc.nextInt(); sc.nextLine();
 
