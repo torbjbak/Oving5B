@@ -16,11 +16,11 @@ public class Oppg5Ba {
 
             Statement stmt = con.createStatement();
 
-            ResultSet rs = stmt.executeQuery("select forfatter, tittel from boktittel where isbn = " + isbn);
+            ResultSet rs = stmt.executeQuery("SELECT forfatter, tittel FROM boktittel WHERE isbn = " + isbn);
             printTable(rs);
             System.out.println();
 
-            rs = stmt.executeQuery("select count(*) antall from eksemplar where isbn = " + isbn);
+            rs = stmt.executeQuery("SELECT COUNT(*) antall FROM eksemplar WHERE isbn = " + isbn);
             printTable(rs);
 
             con.close();
